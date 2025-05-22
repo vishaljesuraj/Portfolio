@@ -13,3 +13,5 @@ Welcome to my personal portfolio website, built to showcase my skills, projects,
 
 ---
 
+©️ Author
+Vishal Jesu Raj

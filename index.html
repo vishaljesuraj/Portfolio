@@ -1,0 +1,658 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vishal Jesu Raj</title>
+  <link href="dist/output.css" rel="stylesheet" />
+  <script src="main.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="assets/images/tittle.png">
+
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000;
+  color: white;
+}
+
+#contact {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.contact-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact-heading h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.contact-heading p {
+  color: #ccc;
+  margin-top: 10px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.contact-card {
+  flex: 1;
+  min-width: 200px;
+  margin: 20px;
+}
+
+.icon-circle {
+  background-color: #1e1e1e;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+}
+
+.contact-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1e1e1e;
+  color: white;
+  font-size: 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #aaa;
+}
+
+.contact-form button {
+  padding: 15px;
+  border: none;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #ddd;
+}
+/* Tailwind utilities are assumed via CDN/PostCSS. You can also extend with custom styles below */
+
+
+.btn-primary {
+  background-color: #facc15;
+  color: black;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #eab308;
+}
+
+.btn-secondary {
+  border: 1px solid #4b5563;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: #1f2937;
+}
+
+.nav-link {
+  color: white;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #facc15;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 100%;
+  background-color: #facc15;
+  border-radius: 1px;
+}
+.nav-link.active {
+  color: #facc15;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 100%;
+  background-color: #facc15;
+  border-radius: 1px;
+}
+
+  </style>
+</head>
+<script>
+    // Highlight active nav-link on scroll
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section[id]');
+      const scrollPos = window.scrollY + 120; // offset for fixed header
+  
+      sections.forEach(section => {
+        const top = section.offsetTop;
+        const bottom = top + section.offsetHeight;
+        const id = section.getAttribute('id');
+        const link = document.querySelector(`.nav-link[href="#${id}"]`);
+  
+        if (link) {
+          if (scrollPos >= top && scrollPos < bottom) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        }
+      });
+    });
+  </script>
+  
+    <body class="bg-black text-white scroll-smooth">
+        <!-- Navbar -->
+        <header class="sticky top-0 z-50 bg-black/80 backdrop-blur shadow-md">
+          <nav class="container mx-auto flex justify-between items-center p-4">
+            <h1 class="text-2xl font-bold text-white">Vishal Jesu Raj</h1>
+            <ul class="hidden md:flex space-x-6 text-sm">
+              <li><a href="#hero" class="nav-link">Home</a></li>
+              <li><a href="#about" class="nav-link">About</a></li>
+              <li><a href="#experience" class="nav-link">Experience</a></li>
+              <li><a href="#projects" class="nav-link">Projects</a></li>
+              <li><a href="#skills" class="nav-link">Skills</a></li>
+              <li><a href="#contact" class="nav-link">Contact</a></li>
+              <li><a href="resume.html" class="nav-link">Resume</a></li>
+            </ul>
+            <button id="menuToggle" class="md:hidden text-2xl text-white">☰</button>
+          </nav>
+        </header>
+        <div id="mobileSidebar" class="fixed top-0 left-0 h-full w-64 bg-black text-white transform -translate-x-full transition-transform duration-300 z-40 md:hidden">
+            <div class="p-6">
+              <h2 class="text-xl font-bold mb-4">Menu</h2>
+              <ul class="space-y-4">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="resume.html" class="nav-link">Resume</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- Overlay (Optional) -->
+          <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-30 md:hidden"></div>
+
+
+
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
+          <div class="max-w-7xl w-full grid md:grid-cols-2 items-center gap-12">
+            <div class="space-y-6 z-10">
+              <h1 class="text-5xl md:text-6xl font-extrabold leading-tight">
+                I'm <span class="text-yellow-400">Vishal </span><br />
+                <span>Frontend Developer</span>
+              </h1>
+              <p class="text-gray-300 text-lg max-w-md">
+                Frontend focused, full-stack ready, and AI-capable.<br />
+                I build interfaces that don’t just look good — they think smart too.
+              </p>
+              <div class="flex gap-4">
+                <a href="#projects" class="btn-primary">View Projects</a>
+                <a href="#contact" class="btn-secondary">Contact Me</a>
+              </div>
+            </div>
+            <div class="relative z-10">
+              <div class="rounded-full overflow-hidden shadow-xl border-2 border-gray-700 bg-white/5">
+                <img src="assets/images/vishal-pic.png" alt="Vishal Profile" class="object-cover w-full h-full" />
+              </div>
+            </div>
+          </div>
+          <!-- Background blur elements -->
+          <div class="absolute -top-20 -left-20 w-[500px] h-[500px] bg-yellow-400 opacity-20 rounded-full blur-[200px]"></div>
+          <div class="absolute bottom-0 right-0 w-[300px] h-[300px] bg-cyan-400 opacity-20 rounded-full blur-[150px]"></div>
+        </section>
+        <!-- About Section -->
+        <section id="about" class="min-h-screen bg-black text-white flex flex-col items-center justify-center px-6 py-24 relative">
+            <div class="relative h-28 md:h-32 flex items-center justify-center mb-16">
+                <div class="relative h-28 md:h-32 flex items-center justify-center mb-16">
+            <!-- Background Word -->
+            <span class="absolute text-[5rem] sm:text-[7rem] md:text-[10rem] font-extrabold text-white opacity-13 leading-none select-none z-0 whitespace-nowrap">
+              About
+            </span>
+            <!-- Foreground Title -->
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold z-10">Who am I</h2>
+                </div>
+            </div>
+  
+            <p class="max-w-3xl text-center text-gray-300 text-lg leading-relaxed" style="line-height: 3rem;">
+            Passionate and resourceful Front-End Developer with hands-on experience crafting responsive, accessible, and production-ready websites using HTML and CSS. Successfully completed a fast-paced internship, delivering client-style interfaces under tight deadlines. Skilled in transforming UI/UX designs into clean, semantic code with attention to responsiveness, accessibility, and cross-browser compatibility.
+  
+            <br><br>
+  
+             Also capable of developing full-stack web applications using AI-powered tools like ChatGPT and GitHub Copilot — combining front-end design, back-end logic, and database integration into seamless, deployment-ready solutions. A fast learner and team player who thrives in dynamic environments and is always eager to explore new technologies.
+            </p>
+        </section>
+
+
+
+        <!-- Experience Section -->
+  <section id="experience" class="min-h-screen flex items-center justify-center px-6 bg-black text-white scroll-mt-24">
+    <div class="max-w-7xl w-full">
+      
+      <!-- Title -->
+      <div class="relative h-36 flex items-center justify-center mb-20">
+        <span class="absolute text-[4rem] sm:text-[5rem] md:text-[8rem] lg:text-[10rem] xl:text-[12rem] font-extrabold text-white opacity-13 leading-none select-none z-0 w-full text-center pointer-events-none">
+          Experience
+        </span>
+        <h2 class="text-4xl sm:text-5xl font-extrabold z-10">Experience</h2>
+      </div>
+  
+      <!-- Timeline -->
+      <div class="relative border-l-[6px] border-yellow-400 pl-10 space-y-16">
+        
+        <!-- Experience Entry -->
+        <div class="group relative">
+          <!-- Dot -->
+          <div class="absolute -left-3 top-4 w-6 h-6 bg-yellow-400 border-[6px] border-black rounded-full group-hover:scale-110 transition"></div>
+          
+          <!-- Card -->
+          <div class="bg-zinc-900 p-8 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300">
+            <h3 class="text-2xl font-bold text-yellow-300 mb-1">Web Developer Intern</h3>
+            <p class="text-gray-400 text-base mb-1">CoderProfession · Tirunelveli</p>
+            <p class="text-gray-500 text-sm mb-4">May 2024 – Jun 2024</p>
+            <ul class="list-disc list-inside space-y-2 text-gray-300 text-base leading-relaxed">
+              <li>Built and deployed 3 production-grade static websites using HTML & CSS.</li>
+              <li>Converted UI/UX mockups into responsive, cross-browser compatible code.</li>
+              <li>Delivered interfaces under tight deadlines while maintaining visual quality.</li>
+            </ul>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+  
+  
+
+ <!-- Projects Section -->
+ <section id="projects" class="scroll-mt-8 min-h-screen py-32 px-6 bg-black text-white">
+    <div class="container mx-auto max-w-6xl text-center relative z-10">
+      
+      <!-- Title Container with Background Word -->
+      <div class="relative h-28 md:h-32 flex items-center justify-center mb-16">
+        <!-- Background Word -->
+        <span class="absolute text-[21vw] sm:text-[5rem] md:text-[10rem] font-extrabold text-white opacity-13 leading-none select-none z-0 whitespace-nowrap">
+          My Works
+        </span>
+        <!-- Foreground Title -->
+        <h2 class="text-5xl sm:text-3xl md:text-5xl font-extrabold z-10">Projects</h2>
+      </div>
+  
+      <!-- Project Cards -->
+      <div class="grid md:grid-cols-2 gap-8 text-left">
+        <div class="bg-zinc-800 p-8 rounded-lg shadow hover:shadow-xl transition">
+          <h4 class="text-xl font-semibold mb-2">Finance Company Landing Page</h4>
+          <p class="mb-2">Responsive layout with service-based UI using HTML & CSS.</p>
+          <a href="https://vishaljesuraj.github.io/FinTrust/" target="_blank" class="text-blue-400 hover:underline">Live Demo</a>
+        </div>
+        <div class="bg-zinc-800 p-8 rounded-lg shadow hover:shadow-xl transition">
+          <h4 class="text-xl font-semibold mb-2">E-Commerce Web Page UI</h4>
+          <p class="mb-2">Semantic layout with product sections using HTML & Flexbox.</p>
+          <a href="https://vishaljesuraj.github.io/Namma-Kadai/" target="_blank" class="text-blue-400 hover:underline">Live Demo</a>
+        </div>
+        <div class="bg-zinc-800 p-8 rounded-lg shadow hover:shadow-xl transition">
+          <h4 class="text-xl font-semibold mb-2">YouTube Home Page Clone</h4>
+          <p class="mb-2">Visual replica using only HTML & CSS with responsive design.</p>
+          <a href="https://vishaljesuraj.github.io/Youtube-Clone/" target="_blank" class="text-blue-400 hover:underline">Live Demo</a>
+        </div>
+        <div class="bg-zinc-800 p-8 rounded-lg shadow hover:shadow-xl transition">
+          <h4 class="text-xl font-semibold mb-2">Supermarket Management Website</h4>
+          <p class="mb-2">Full stack with PHP, JS, MySQL. Built with AI-assisted tools.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+
+ <!-- Skills Section -->
+ <section id="skills" class="scroll-mt-8 min-h-screen py-32 px-6 bg-black text-white">
+
+    <div class="container mx-auto max-w-5xl text-center relative z-10">
+  
+      <div class="relative h-28 md:h-32 flex items-center justify-center mb-16">
+        <!-- Background Word -->
+        <span class="absolute text-[8rem] sm:text-[5rem] md:text-[10rem] font-extrabold text-white opacity-15 leading-none select-none z-0 whitespace-nowrap">
+          Skills
+        </span>
+        <!-- Foreground Title -->
+        <h2 class="text-5xl sm:text-3xl md:text-5xl font-extrabold z-10">My Expertise</h2>
+      </div>
+  
+      <!-- Skill Grid -->
+      <div class="grid md:grid-cols-2 gap-10 text-left">
+        <!-- Left Column -->
+        <div class="space-y-6">
+          <div>
+            <div class="flex justify-between mb-1 text-sm">
+              <span>HTML</span>
+              <span>90%</span>
+            </div>
+            <div class="w-full bg-white/20 h-2 rounded-full">
+              <div class="bg-white h-2 rounded-full" style="width: 90%;"></div>
+            </div>
+          </div>
+  
+          <div>
+            <div class="flex justify-between mb-1 text-sm">
+              <span>CSS</span>
+              <span>85%</span>
+            </div>
+            <div class="w-full bg-white/20 h-2 rounded-full">
+              <div class="bg-white h-2 rounded-full" style="width: 85%;"></div>
+            </div>
+          </div>
+  
+          <div>
+            <div class="flex justify-between mb-1 text-sm">
+              <span>JavaScript</span>
+              <span>50%</span>
+            </div>
+            <div class="w-full bg-white/20 h-2 rounded-full">
+              <div class="bg-white h-2 rounded-full" style="width: 60%;"></div>
+            </div>
+          </div>
+  
+         
+  
+          <div>
+            <div class="flex justify-between mb-1 text-sm">
+              <span>GitHub</span>
+              <span>65%</span>
+            </div>
+            <div class="w-full bg-white/20 h-2 rounded-full">
+              <div class="bg-white h-2 rounded-full" style="width: 75%;"></div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Right Column -->
+        <div class="space-y-6">
+          <div>
+            <div class="flex justify-between mb-1 text-sm">
+              <span>PHP (Beginner)</span>
+              <span>40%</span>
+            </div>
+            <div class="w-full bg-white/20 h-2 rounded-full">
+              <div class="bg-white h-2 rounded-full" style="width: 40%;"></div>
+            </div>
+          </div>
+  
+          <div>
+            <div class="flex justify-between mb-1 text-sm">
+              <span>MySQL</span>
+              <span>60%</span>
+            </div>
+            <div class="w-full bg-white/20 h-2 rounded-full">
+              <div class="bg-white h-2 rounded-full" style="width: 60%;"></div>
+            </div>
+          </div>
+  
+          
+          <div>
+            <div class="flex justify-between mb-1 text-sm">
+              <span>Canva</span>
+              <span>90%</span>
+            </div>
+            <div class="w-full bg-white/20 h-2 rounded-full">
+              <div class="bg-white h-2 rounded-full" style="width: 80%;"></div>
+            </div>
+          </div>
+  
+          <div>
+            <div class="flex justify-between mb-1 text-sm">
+              <span>ChatGPT</span>
+              <span>95%</span>
+            </div>
+            <div class="w-full bg-white/20 h-2 rounded-full">
+              <div class="bg-white h-2 rounded-full" style="width: 95%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+  <!-- Contact Section -->
+  <section id="contact">
+     <!-- Title Container with Background Word -->
+     <div class="relative h-28 md:h-32 flex items-center justify-center mb-16">
+        <!-- Background Word -->
+        <span class="absolute text-[21vw] sm:text-[5rem] md:text-[10rem] font-extrabold text-white opacity-13 leading-none select-none z-0 whitespace-nowrap">
+          Reach out
+        </span>
+        <!-- Foreground Title -->
+        <h2 class="text-5xl sm:text-3xl md:text-5xl font-extrabold z-10">Contact</h2>
+      </div>
+    </div>
+
+    <div class="contact-info">
+      <div class="contact-card">
+        <div class="icon-circle"><i class="fas fa-map-marker-alt"></i></div>
+        <h4>ADDRESS</h4>
+        <p>Tirunelveli, Tamil Nadu<br />India</p>
+      </div>
+
+      <div class="contact-card">
+        <div class="icon-circle"><i class="fas fa-phone-alt"></i></div>
+        <h4>CONTACT NUMBER</h4>
+        <p>+91 9677952424</p>
+      </div>
+
+      <div class="contact-card">
+        <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+        <h4>EMAIL ADDRESS</h4>
+        <p>vishaljr.dev@gmail.com</p>
+      </div>
+    </div>
+
+    <div class="contact-main">
+      <!-- Profile Image -->
+      <div class="contact-image">
+        <img src="assets/images/vishal-pic.png" alt="Vishal">
+      </div>
+
+      <!-- Contact Form -->
+      <form action="mailto:vishaljr.dev@gmail.com" method="POST" enctype="text/plain" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="text" name="subject" placeholder="Subject" required />
+        <textarea name="message" rows="4" placeholder="Message" required></textarea>
+        <button type="submit">SEND MESSAGE</button>
+      </form>
+    </div>
+  </section>
+
+
+  <footer class="bg-black text-white pt-16 pb-10 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-sm">
+  
+      <!-- About -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">About</h3>
+        <p class="text-gray-400 mb-6">
+          Passionate front-end developer based in Tirunelveli, focused on crafting clean, user-friendly web interfaces.
+        </p>
+        <div class="flex space-x-4">
+            <a href="https://www.linkedin.com/in/vishal-jesu-raj-64b56a363/" target="_blank"
+               class="bg-gray-800 w-10 h-10 flex items-center justify-center rounded-full hover:bg-yellow-400 hover:text-black transition">
+               <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/vishaljesuraj" target="_blank"
+               class="bg-gray-800 w-10 h-10 flex items-center justify-center rounded-full hover:bg-yellow-400 hover:text-black transition">
+               <i class="fa-brands fa-square-github" style="size: 1rem;"></i>
+            </a>
+            <a href="https://www.instagram.com/vjr.374?igsh=c2FsaGYzcW1lZm0w" target="_blank"
+               class="bg-gray-800 w-10 h-10 flex items-center justify-center rounded-full hover:bg-yellow-400 hover:text-black transition">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+          
+      </div>
+  
+      <!-- Links -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">Links</h3>
+        <ul class="space-y-2 text-gray-400">
+          <li><a href="#hero" class="hover:text-yellow-400">→ Home</a></li>
+          <li><a href="#about" class="hover:text-yellow-400">→ About</a></li>
+          <li><a href="#projects" class="hover:text-yellow-400">→ Projects</a></li>
+          <li><a href="#skills" class="hover:text-yellow-400">→ Skills</a></li>
+          <li><a href="#contact" class="hover:text-yellow-400">→ Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Services -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">Services</h3>
+        <ul class="space-y-2 text-gray-400">
+          <li>→ UI/UX Design</li>
+          <li>→ Front-End Development</li>
+          <li>→ Responsive Design</li>
+          <li>→ Website Cloning</li>
+          <li>→ GitHub Projects</li>
+        </ul>
+      </div>
+  
+      <!-- Contact -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">Have a Question?</h3>
+        <ul class="space-y-3 text-gray-400">
+          <li>
+            <i class="fas fa-map-marker-alt mr-2 text-yellow-400"></i>
+            Tirunelveli, Tamil Nadu, India
+          </li>
+          <li>
+            <i class="fas fa-phone-alt mr-2 text-yellow-400"></i>
+            +91 9677952424
+          </li>
+          <li>
+            <i class="fas fa-envelope mr-2 text-yellow-400"></i>
+            vishaljr.dev@gmail.com
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+    <!-- Bottom Footer -->
+    <div class="mt-10 text-center text-gray-500 border-t border-gray-800 pt-6 text-xs">
+      &copy; 2025 Vishal Jesu Raj. All rights reserved. | Crafted with Code & Creativity
+    </div>
+  </footer>
+  
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      
+    <script>
+  const toggle = document.getElementById('menuToggle');
+  const sidebar = document.getElementById('mobileSidebar');
+  const overlay = document.getElementById('overlay');
+  const sidebarLinks = sidebar.querySelectorAll('a'); // Get all links inside sidebar
+
+  // Function to close sidebar
+  function closeSidebar() {
+    sidebar.classList.add('-translate-x-full');
+    overlay.classList.add('hidden');
+  }
+
+  // Toggle sidebar on hamburger click
+  toggle.addEventListener('click', () => {
+    sidebar.classList.toggle('-translate-x-full');
+    overlay.classList.toggle('hidden');
+  });
+
+  // Close sidebar on overlay click
+  overlay.addEventListener('click', closeSidebar);
+
+  // Close sidebar on link click
+  sidebarLinks.forEach(link => {
+    link.addEventListener('click', closeSidebar);
+  });
+</script>
+
+  
+</body>
+</html>
